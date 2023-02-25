@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends "webApp/headerFooter.html" %}
+     {% block body_block %}
+          {% load static %}
+
+          <style>
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+              transition: 0.3s;
+              width: 40%;
+            }
+            
+            .card:hover {
+              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+            
+            .container {
+              padding: 2px 16px;
+            }
+            </style>
+    <script>
+        window.onload = function() {
+	if(!window.location.hash) {
+		window.location = window.location + '#loaded';
+		window.location.reload();
+	}
+}
+    </script>
+    <style>
+        body{
+            margin-top: 100px;
+        }
+    </style>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Skin Tone Detected Output</h1>
+        </div>
+
+    </div>
+    
+    {% if imgf %}
+    <div class="card" style="width: 25em; height: 35em;transform: translateX(75%)">
+        <img src="/media/{{ imgf }}" alt="Avatar" style="width:100%">
+        <div class="container" >
+             <h3>Skin tone: {{ skinT }}</h3>
+        </div>
+      </div>
+    {% endif %}
+
+    
+{% endblock %}
