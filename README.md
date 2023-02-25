@@ -1,7 +1,7 @@
 # Skintone_Detector
 This is an web app to detect skintone of human in three categories i.e fair, mald and dark
 
-Packages Required:
+### Packages Required:
 1. pip install Django
 2. pip install Pillow
 3. pip install bcrypt
@@ -11,7 +11,7 @@ Packages Required:
 7. pip install imutils
 8. pip install matplotlib
 
-Steps to run project:
+### Steps to run project:
 1. Navigate inside folder which has manage.py file.
 2. Open the above location in terminal or command prompt.
 3. Run “python manage.py migrate”
